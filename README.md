@@ -29,11 +29,14 @@ The user will give a string for the program to check if it is a Pangram or not. 
 A collection of particles is contained in a linear chamber. They all have the same speed,
 but some are headed toward the right and others are headed toward the left. These
 particles can pass through each other without disturbing the motion of the particles, so
-all the particles will leave the chamber relatively quickly.
+all the particles will leave the chamber relatively quickly. The user will give two inputs 
+to run the program. The first is a integer value that says the speed at which you want the particle
+to move. The second is a string value which is in essence the array of the linear chamber. L in the array
+means the particle is moving in the left direction and R means the particle is moving in the right direction.
+The particles can overlap. Once all particles have exited out of the chamber, the program will stop.
 #### Examples of this:
-(Note that in the examples below, the double quotes should not be considered part of
-the input or output strings.)
-0)  2, "..R...."
+##### Example 1:
+2, "..R...."
 Returns:
   { "..X....",
     "....X..",
@@ -41,7 +44,9 @@ Returns:
     "......." }
 The single particle starts at the 3rd position, moves to the 5th, then 7th, and then out of
 the chamber.
-1)  3,  "RR..LRL"
+
+##### Example 2:
+3,  "RR..LRL"
 Returns:
   { "XX..XXX",
     ".X.XX..",
@@ -49,7 +54,9 @@ Returns:
     "......." }
 Note that, at the first time step after init, there are actually 4 particles in the chamber,
 but two are passing through each other at the 4th position
-2)  2,  "LRLR.LRLR"
+
+##### Example 3:
+2,  "LRLR.LRLR"
 Returns:
   { "XXXX.XXXX",
     "X..X.X..X",
@@ -58,15 +65,21 @@ Returns:
     "........." }
 At time 0 (init) there are 8 particles. At time 1, there are still 6 particles, but only 4
 positions are occupied since particles are passing through each other.
-3)  10,  "RLRLRLRLRL"
+
+##### Example 4:
+10,  "RLRLRLRLRL"
 Returns:
   { "XXXXXXXXXX",
     ".........." }
 These particles are moving so fast that they all exit the chamber by time 1.
-4)  1,  "..."
+
+##### Example 5:
+1,  "..."
 Returns:
   { "..." }
-5)  1,  "LRRL.LR.LRR.R.LRRL."
+
+##### Example 6:
+1,  "LRRL.LR.LRR.R.LRRL."
 Returns:
   { "XXXX.XX.XXX.X.XXXX.",
     "..XXX..X..XX.X..XX.",
