@@ -2,7 +2,7 @@
 I tried to keep the execution of this executable fairly simplistic in nature
 so that both Windows and Linux can run this program. 
 
-All that is needed is to type: "py CodeTest" and it will start the program. 
+All that is needed is to type: ```python py CodeTest``` and it will start the program. 
 The "py" part may be different on your computer, replace the "py" with 
 whatever phrase you use to start up python in terminal. It will most likely be
 "python" or whatever you are using as your path variable.
@@ -11,6 +11,10 @@ Or you can just double click the CodeTest1.py file. It should pull up terminal
 and allow you to play around with the program, but that is the boring way of doing things.
 You will learn alot more with using terminal to find and start a python file then by
 just double clicking the program in a file. 
+
+## Installation
+Really all you need to do is clone this into a repository. Nothing needs to be installed on your system except
+for Python. Once Python has been installed to your path you can run this program.
 
 ## Runtime Prompt for the application. 
 Enter P for Pangram Detector, A for Animation or E to exit: 
@@ -36,7 +40,7 @@ means the particle is moving in the left direction and R means the particle is m
 The particles can overlap. Once all particles have exited out of the chamber, the program will stop.
 #### Examples of this:
 ##### Example 1:
-2, "..R...."
+```python 2, "..R...."```
 Returns:
   { "..X....",
     "....X..",
@@ -46,7 +50,7 @@ The single particle starts at the 3rd position, moves to the 5th, then 7th, and 
 the chamber.
 
 ##### Example 2:
-3,  "RR..LRL"
+```python 3,  "RR..LRL"```
 Returns:
   { "XX..XXX",
     ".X.XX..",
@@ -56,7 +60,7 @@ Note that, at the first time step after init, there are actually 4 particles in 
 but two are passing through each other at the 4th position
 
 ##### Example 3:
-2,  "LRLR.LRLR"
+```python 2,  "LRLR.LRLR"```
 Returns:
   { "XXXX.XXXX",
     "X..X.X..X",
@@ -67,19 +71,19 @@ At time 0 (init) there are 8 particles. At time 1, there are still 6 particles, 
 positions are occupied since particles are passing through each other.
 
 ##### Example 4:
-10,  "RLRLRLRLRL"
+```python 10,  "RLRLRLRLRL"```
 Returns:
   { "XXXXXXXXXX",
     ".........." }
 These particles are moving so fast that they all exit the chamber by time 1.
 
 ##### Example 5:
-1,  "..."
+```python 1,  "..."```
 Returns:
   { "..." }
 
 ##### Example 6:
-1,  "LRRL.LR.LRR.R.LRRL."
+```python 1,  "LRRL.LR.LRR.R.LRRL."```
 Returns:
   { "XXXX.XX.XXX.X.XXXX.",
     "..XXX..X..XX.X..XX.",
